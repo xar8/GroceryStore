@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
   vector <string> list; //vector
-  int numItems = 0;
   char input;
   string groceryitem;
   int vectorsize;
@@ -36,18 +35,16 @@ int main()
     {      
       if(list.size() > 0)
         {
-          list.pop_back();
-          vectorsize = list.size();
+          vectorsize = list.size()-1;
           cout<<list[vectorsize]<<" was deleted from the list."<<endl;
+          list.pop_back();
         }
     }        
   else if (input == 'A' || input == 'a' )
     {         
       cout<<"What is the item?" << endl;
       cin>> groceryitem;
-      list.push_back(groceryitem);                
-      numItems = numItems + 1;
-      
+      list.push_back(groceryitem);              
     }
   } while (input != 'q' && input != 'Q'); 
   
