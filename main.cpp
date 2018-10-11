@@ -10,7 +10,7 @@ int main()
   int numItems = 0;
   char input;
   string groceryitem;
-  string remove;
+  int vectorsize;
 
   do
   {        
@@ -36,9 +36,9 @@ int main()
     {      
       if(list.size() > 0)
         {
-          remove = groceryitem;  
           list.pop_back();
-          cout<<remove<<" was deleted from the list."<<endl;
+          vectorsize = list.size();
+          cout<<list[vectorsize]<<" was deleted from the list."<<endl;
         }
     }        
   else if (input == 'A' || input == 'a' )
